@@ -1,0 +1,16 @@
+[install]
+# Configure Bun package manager settings
+cache = true
+lockfile = true
+registry = "https://registry.npmjs.org/"
+
+[install.scopes]
+# Configure scoped packages if needed
+
+[run]
+# Configure Bun runtime settings
+hot = true
+watch = true
+
+[test]
+# Configure test settings if needed in the future

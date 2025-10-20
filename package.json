@@ -3,13 +3,22 @@
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "start": "bunx expo start",
+    "android": "bunx expo start --android",
+    "ios": "bunx expo start --ios",
+    "web": "bunx expo start --web",
+    "dev": "bunx expo start --dev-client",
+    "build:web": "bunx expo export --platform web",
+    "build:ios": "bunx eas build --platform ios",
+    "build:android": "bunx eas build --platform android",
+    "clean": "bunx expo start --clear"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.67.0",
     "expo": "~54.0.13",
+    "expo-camera": "^17.0.8",
+    "expo-image-picker": "^17.0.8",
+    "expo-media-library": "^18.2.0",
     "expo-status-bar": "~3.0.8",
     "react": "19.1.0",
     "react-native": "0.81.4"
@@ -18,5 +27,6 @@
     "@types/react": "~19.1.0",
     "typescript": "~5.9.2"
   },
-  "private": true
+  "private": true,
+  "packageManager": "bun@1.0.0"
 }
